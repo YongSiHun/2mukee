@@ -1,0 +1,527 @@
+
+1. 표준입력으로 두 정수를 입력받아 큰수를 작은수로 나눈 몫과 나머지를 출력하는 프로그램
+
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int a, b; 
+   printf("첫 번째 정수를 입력하세요 : "); 
+   scanf("%d", &a); 
+   printf("두 번째 정수를 입력하세요 : "); 
+   scanf("%d", &b); 
+   printf("몫 = %d \n나머지 = %d", a > b ? a / b : b / a, a > b ? a%b : b%a); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. 킬로그램을 소수로 입력받아 파운드로 계산하여 소수점 3자라까지 출력하는 프로그램
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float kg, pon; 
+   printf("몇 키로그램을 파운드로 변환할래요? : "); 
+   scanf("%f", &kg); 
+   pon = kg/0.45392; 
+   printf("%f kg는 %.3f 파운드 입니다.", kg, pon); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. 센티미터를 소수로 입력받아 피트로 계산하여 소수점 3자리 까지 출력하는 프로그램
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float centi, feet; 
+   printf("피트단위로 확인해보고 싶은 센티미터 값 : "); 
+   scanf("%f", &centi); 
+   feet = centi/30.48; 
+   printf("%.3ffeet 입니다.",feet); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. 반지름이 7.58인 구의 체적과 표면적을 구하는 프로그램을 작성하시오.
+
+#include<stdio.h> 
+#include<conio.h> 
+#define PI 3.141592 
+int main() 
+{ 
+   float ban = 7.58*7*58; 
+   printf("구의 체적 = %f\n구의 표면적 = %f", (PI*ban*7.58)*(4 / 3), 4 * PI*ban); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. 위 프로그램에서 구의 반지름을 표준입력으로 처리
+
+
+#include<stdio.h> 
+#include<conio.h> 
+#define PI 3.141592 
+int main() 
+{ 
+   float ban; 
+   printf("구의 체적과 표면적을 확인하고픈 원의 반지름 : "); 
+   scanf("%f", &ban); 
+   printf("구의 체적 = %f\n구의 표면적 = %f", (PI*ban*ban*ban)*(4 / 3), 4 * PI*ban*ban); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. 정수인 천만 이하의 한 수를 입력받아 우리가 사용하는 단위인 만,천,백,십,일 단위로 출력하는 프로그램
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   unsigned int jeong,man,cun,bac,sip,ill; 
+   printf("천만이하의 정수를 입력하시오 : "); 
+   scanf("%d", &jeong); 
+   man = jeong / 10000; 
+   cun = (jeong - man * 10000) / 1000; 
+   bac = (jeong - man * 10000 - cun * 1000) / 100; 
+   sip = (jeong - man * 10000 - cun * 1000 - bac * 100) / 10; 
+   ill = (jeong - man * 10000 - cun * 1000 - bac * 100 - sip * 10); 
+   printf("%d만", jeong > 10000 ? man: 0); 
+   printf(" %d천", jeong > 1000 ? cun : 0); 
+   printf(" %d백", jeong > 100 ? bac : 0); 
+   printf(" %d십", jeong > 10 ? sip : 0); 
+   printf(" %d 입니다.", jeong > 1 ? ill : 0); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. 조건연산자를 이용하여 임의의 달을 입력받아 이달이 상반기이면 “상반기 입니다”를, 하반기이면 “하반기 입니다”를 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+#define a "하반기 입니다." 
+#define b "상반기 입니다." 
+int main() 
+{ 
+   short int mon; 
+   printf("몇월인지 입력하시오 : "); 
+   scanf("%d", &mon); 
+   printf("%s", mon > 7 ? a : b); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. 세 수를 입력받아 가장 큰수를 구하는 프로그램을 조건 연산자를 이용하여 작성하시오
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int a, b, c, res; 
+   printf("세가지 수를 입력하시오 : "); 
+   scanf("%d %d %d", &a, &b, &c); 
+   res = a >= b ? (a >= c ? a : c) : (b >= c ? b : c); 
+   printf("가장 큰수 = %d",res); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. 표준입력으로 키와 몸무게를 실수로 입력 받아 다음조건을 이용하여 정상인지, 비만인지 출력하는 프로그램을 작성하시오.
+
+
+#include<stdio.h> 
+#include<conio.h> 
+#define me "정상 입니다" 
+#define you "비만 입니다" 
+int main() 
+{ 
+   float mom, key; 
+   printf("몸무게를 입력하시오 : "); 
+   scanf("%f", &mom); 
+   printf("키를 입력하시오 : "); 
+   scanf("%f", &key); 
+   printf("%s", mom <= (key - 100)*0.9 ? me : you); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. 원금이 100만원인 경우, 예치기간을 년 단위로 입려받아 만기 시 총 금액을 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   unsigned int mon, year, iza; 
+   printf("원금을 입력하시오 : "); 
+   scanf("%d", &mon); 
+   printf("예치기간을 입력하시오 : "); 
+   scanf("%d", &year); 
+   iza = mon*(1+4.5*year); 
+   printf("만기시 총 금액 = %d원", iza); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. 위 프로그램에서 함수 pow(a,b)=ab 이용과 include<math.h>이용하여 만기시 총금액 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+#include<math.h> 
+int main() 
+{ 
+   unsigned int mon, year, iza; 
+   double pow(double mon, double year); 
+   printf("원금을 입력하시오 : "); 
+   scanf("%d", &mon); 
+   printf("예치기간을 입력하시오 : "); 
+   scanf("%d", &year); 
+   iza = mon*(1 + 4.5*year); 
+   printf("만기시 총 금액 = %d원", iza); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. 이차원 평면에서 다음 두 점(3.2,4.6)과 (-8.3,-2.3)의 중간지점을 출력하는 프로그램
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float x1 = 3.2, x2 = -8.3, y1 = 4.6, y2 = -2.3, centerx, centery; 
+   centerx = (x1 + x2) / 2; 
+   centery = (y1 + y2) / 2; 
+   printf("중간지점\nX= %f\nY= %f ", centerx, centery); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. 지불할 금액을 정수로 입력받아 화폐단위가 각각 몇 개씩 필요한지 출력.
+
+입력은 최소 천원단위로 입력, 50000,10000,5000,1000 4가지의 화폐단위
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int don, oman, man, ocun, cun; 
+   printf("지불할 금액을 천원단위 이상으로 입력하시오 : "); 
+   scanf("%1000d", &don); 
+   oman = (don / 10000) / 5; 
+   man = (don - oman * 50000) / 10000; 
+   ocun = ((don - oman * 50000)-(man*10000)) / 5000; 
+   cun = ((don - oman * 50000) - (man * 10000) - (ocun * 5000)) / 1000; 
+   printf("오만원권 = %d개\n", oman); 
+   printf("만원권 = %d개\n", man); 
+   printf("오천원권 = %d개\n", ocun); 
+   printf("천원권 = %d개\n", cun); 
+   getch(); 
+} 
