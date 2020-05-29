@@ -1,0 +1,141 @@
+1. 변수를 선언하여 문자 ‘*’를 저장하고 포인터변수를 선언하여 위 변수의 주소, 코드값을 출력하는 char형 포인터에관한 프로그램을 작성 
+#include<stdio.h> 
+int main() 
+{ 
+   char star = '*'; 
+   char *mm = &star; 
+   printf("%p %c %c\n",*mm,*mm,star); 
+} 
+
+
+
+
+2. 두 정수를 저장하기 위해 변수를 선언하여 각각 10,20을 저장. 
+다음 변수 sum과 포인터 변수 p를 선언하고 p와 sum만을 사용하여 
+data1에는 100을, data2에는 200을 저장하고 두 변수의 합을 변수 sum에 저장하여 
+출력하는 int형 포인터 프로그램을 작성. 
+#include<stdio.h> 
+int main() 
+{ 
+   int data1 = 10, data2 = 20; 
+   int sum = 0; 
+   int *p = &data1; 
+   sum = *p; 
+   *p = 100; 
+   p = &data2; 
+   sum = *p; 
+   *p = 200; 
+   sum = data1 + data2; 
+   printf("%d", sum); 
+} 
+
+
+
+
+3. 두 정수를 저장하기 위해 변수를 선언하여 각각 10,20을 저장하고 두 변수의 주소값을 저장하는 포인터 두 개를 선언하여 저장하고, 변수 sum과 이중포인터 변수 dp를 선언한 후에 
+dp와 p1,p2 그리고 sum만을 이용하요 data1에는 100을, data2에는 200을 저장한 후 
+위의 두 변수의 합을 변수 sum에 저장하여 출력 
+#include<stdio.h> 
+int main() 
+{ 
+   int data1 = 10, data2 = 20; 
+   int *p1 = &data1, *p2 = &data2; 
+   int sum = 0; 
+   int **dp; 
+   dp = &p1; 
+   sum = **dp; 
+   **dp = 100; 
+   dp = &p2; 
+   sum = **dp; 
+   **dp = 200; 
+   sum = data1+data2; 
+   printf("%d\n", sum); 
+} 
+
+
+
+
+4. int형 변수 value에 0x2F24263F를 정의한 후, char*변수 pc를 선언하고 
+pc변수를 이용하여 value의 저장값을 각각 byte단위로 인지하여 
+각각의 문자를 출력하는 프로그램을 작성하시오. 
+#include<stdio.h> 
+int main() 
+{ 
+   int value; 
+   value = 0x2F24263F; 
+   char *pc = (char*)&value; 
+   printf("%c %c %c %c\n", pc[0], pc[1], pc[2], pc[3]); 
+} 
+
+
+
+
+5. 다음과 같이 int형 변수 I에 0x324F3A24를 정의하고 char*변수 p를 선언한 후, 
+포인터 변수 p를 이용하여 I의 저장값을 각각 바이트로 인지하여 바로 324F3A24로 
+출력하는 프로그램을 작성하시오. 
+#include<stdio.h> 
+int main() 
+{ 
+   int i = 0x324F3A24; 
+   char*p = (char*)&i; 
+   printf(" %0X%0X%0X%0X \n", p[3],p[2],p[1],p[0]); 
+} 
+
+
+
+
+6. 다음과 같이 int형 변수 I에 0x3C405B7B를 정의하고, char*변수 p를 선언한후, 
+포인터 변수 p가 다음 내용 5B인 문자 ‘[’를 가리키도록 하여 다음 조건이 만족하는 
+프로그램을 작성하시오. 
+#include<stdio.h> 
+int main() 
+{ 
+   int i = 0x3C405B7B; 
+   int n = 0x3C405B7B; 
+   char *pk = (char*)&i; 
+   char *p = &pk[0]; 
+   printf("%c %c %c %c\n", p[0],p[1],p[2],p[3]); 
+   n=*p++; 
+   printf("*p++ = %c\n", n); 
+   n=*++p; 
+   printf("*++p = %c\n", n); 
+   n=(*p)++; 
+   printf("(*p)++ = %c\n", n); 
+   n = ++*p; 
+   printf("++*p = %c\n", n); 
+} 
+
+
+
+
+7. double형 변수의 8바이트 저장 구조를 각각 4바이트의 저장 구조로 생각해서 
+표준입력으로 두 정수를 저장하고, 두 정수에 대해 사칙연산을 수행하는 프로그램. 
+#include<stdio.h> 
+int main() 
+{ 
+   int a, b; 
+   double p[4][4]; 
+   printf("두 정수를 입력하시오 : "); 
+   scanf("%d %d", &a, &b); 
+   *p[0, 1, 2, 3] = a; 
+   *p[4, 5, 6, 7] = b; 
+   printf("덧셈 %.3f\n", *p[0, 1, 2, 3] + *p[4, 5, 6, 7]); 
+   printf("뺄셈 %.3f\n", *p[0, 1, 2, 3] - *p[4, 5, 6, 7]); 
+   printf("곱셈 %.3f\n", *p[0, 1, 2, 3] * *p[4, 5, 6, 7]); 
+   printf("나눗셈 %.3f\n", *p[0, 1, 2, 3] / *p[4, 5, 6, 7]); 
+} 
+
+
+
+
+8. 두 개의 double형 변수를 선언하여 표준입력을 받고, 두 개의 double형 포인터 변수를 선언하여 위 두 정수에 대한 사칙연산을 수행 
+#include<stdio.h> 
+int main() 
+{ 
+   double a = 0, b = 0; 
+   printf("실수를 두개 입력하시오 : "); 
+   scanf("%lf %lf", &a, &b); 
+   double *c = &a; 
+   double *d = &b; 
+   printf("합 = %.3lf\n차 = %.3lf\n곱 = %.3lf\n셈 = %.3lf", *c+*d, *c-*d, *c**d, *c / *d); 
+} 
