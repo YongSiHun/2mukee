@@ -1,0 +1,515 @@
+1. 미터, 인치, 피트, 야드 간의 길이 변화 구하기
+
+ 
+
+#include<stdio.h> 
+int main() 
+{ 
+   int in = 1, out = 1; 
+   float chg = 1; 
+   while (in != 0||out!=0) 
+   { 
+      puts("[1] 미터(m) [2] 인치(in) [3] 피트(ft) [4] 야드(yd) [0] 종료 [stop]"); 
+      printf("입력할 단위를 선택하시오 : "); 
+      scanf("%d", &in); 
+      if (in == 0) 
+      { 
+         break; 
+      } 
+      puts("\n[1] 미터(m) [2] 인치(in) [3] 피트(ft) [4] 야드(yd) [0] 종료 [stop]"); 
+      printf("출력할 단위를 고르시오 : "); 
+      scanf("%d", &out); 
+      if (in == 1) 
+      { 
+         switch (out) 
+         { 
+            case 1: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 미터 -> %f 미터", chg, chg); 
+               } 
+               break; 
+            } 
+            case 2: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 미터 -> %f 인치", chg, chg*39.370079); 
+               } 
+               break; 
+            } 
+            case 3: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 미터 -> %f 피트", chg, chg*3.28084); 
+               } 
+               break; 
+            } 
+            case 4: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 미터-> %f 야드", chg, chg*1.093613); 
+               } 
+               break; 
+            } 
+            default: 
+            { 
+               printf("\n잘못입력하셨습니다."); 
+               break; 
+            } 
+         } 
+      } 
+      else if (in == 2) 
+      { 
+         switch (out) 
+         { 
+            case 1: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 인치 -> %f 미터", chg, chg*0.0254); 
+               } 
+               break; 
+            } 
+            case 2: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 인치 -> %f 인치", chg, chg); 
+               } 
+               break; 
+            } 
+            case 3: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 인치 -> %f 피트", chg, chg*0.083333); 
+               } 
+               break; 
+            } 
+            case 4: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 인치 -> %f 야드", chg, chg*0.027778); 
+               } 
+               break; 
+            } 
+            default: 
+            { 
+               printf("\n잘못입력하셨습니다."); 
+               break; 
+            } 
+         } 
+      } 
+      else if (in == 3) 
+      { 
+         switch (out) 
+         { 
+            case 1: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 피트 -> %f 미터", chg, chg*0.3048); 
+               } 
+               break; 
+            } 
+            case 2: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 피트 -> %f 인치", chg, chg * 12); 
+               } 
+               break; 
+            } 
+            case 3: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 피트 -> %f 피트", chg, chg); 
+               } 
+               break; 
+            } 
+            case 4: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 피트 -> %f 야드", chg, chg*0.333333); 
+               } 
+               break; 
+            } 
+            default: 
+            { 
+               printf("\n잘못입력하셨습니다."); 
+               break; 
+            } 
+         } 
+      } 
+      else if (in == 4) 
+      { 
+         switch (out) 
+         { 
+            case 1: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 야드 -> %f 미터", chg, chg*0.9144); 
+               } 
+               break; 
+            } 
+            case 2: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 야드 -> %f 인치", chg, chg * 36); 
+               } 
+               break; 
+            } 
+            case 3: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 야드 -> %f 피트", chg, chg * 3); 
+               } 
+               break; 
+            } 
+            case 4: 
+            { 
+               while (chg != 0) 
+               { 
+                  printf("\n변환시킬 길이를 입력하시오 : "); 
+                  scanf("%f", &chg); 
+                  printf("%f 야드-> %f 야드", chg, chg); 
+               } 
+               break; 
+            } 
+            default: 
+            { 
+               printf("\n잘못입력하셨습니다."); 
+               break; 
+            } 
+         } 
+      } 
+      break; 
+   } 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+2. 이항비트 &,|,^\과 단항 비트연산자 ~를 수행하고 정수를 이진수로 표현하여 비트연산 확인
+
+ 
+
+#include<stdio.h> 
+int main() 
+{ 
+   int sel = 1, x = 0, y = 0, n = 0, k, l; 
+   while (sel != 0) 
+   { 
+      printf("\n\n\n"); 
+      puts("[1] 비트 AND (&)"); 
+      puts("[2] 비트 OR (|)"); 
+      puts("[3] 비트 XOR (^)"); 
+      puts("[4] 비트 COMPLEMENT (~)"); 
+      puts("[0] 종료 (STOP)"); 
+      printf("\n위 연산중 하나를 고르시오 : "); 
+      scanf("%d", &sel); 
+      switch (sel) 
+      { 
+         case 1: 
+         { 
+            printf("비트연산할 두 정수 입력 : "); 
+            scanf("%d %d", &x, &y); 
+            printf("\n x= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (x & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("\n y= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (y & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("x&y = "); 
+            k = x&y; 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (k & 1 << n) ? 1 : 0); 
+            } 
+            break; 
+         } 
+         case 2: 
+         { 
+            printf("비트연산할 두 정수 입력 : "); 
+            scanf("%d %d", &x, &y); 
+            printf("\n x= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (x & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("\n y= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (y & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("x|y = "); 
+            k = x | y; 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (k & 1 << n) ? 1 : 0); 
+            } 
+            break; 
+         } 
+         case 3: 
+         { 
+            printf("비트연산할 두 정수 입력 : "); 
+            scanf("%d %d", &x, &y); 
+            printf("\n x= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (x & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("\n y= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (y & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("x^y = "); 
+            k = x^y; 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (k & 1 << n) ? 1 : 0); 
+            } 
+            break; 
+         } 
+         case 4: 
+         { 
+            printf("비트 보수 연산 할 하나의 정수 입력 : "); 
+            scanf("%d", &x); 
+            printf("\n x= "); 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (x & 1 << n) ? 1 : 0); 
+            } 
+            puts(" "); 
+            printf("~x = "); 
+            k = ~x; 
+            for (n = 31; n >= 0; n--) 
+            { 
+               printf("%1d", (k & 1 << n) ? 1 : 0); 
+            } 
+            break; 
+         } 
+      } 
+   } 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. 두 정수를 교환하는 4가지의 방법
+
+ 
+
+#include<stdio.h> 
+int main() 
+{ 
+   int sel = 0, x = 0, y = 0, dump; 
+   printf("교환할 두 정수를 입력하시오 : "); 
+   scanf("%d %d", &x, &y); 
+   printf("입력한 두 수 : x = %d and y= %d",x,y); 
+   printf("\n\n[1] 임시 저장 장소 이용방법\n"); 
+   puts("[2] 덧셈과 뺼셈으로 교환방법"); 
+   puts("[3] 곱셈과 나눗셈으로 교환방법"); 
+   puts("[4] XOR연산자 ^"); 
+   printf("\n위 교환 방법중 하나를 고르시오 : "); 
+   scanf("%d", &sel); 
+   switch (sel) 
+   { 
+      case 1: 
+      { 
+         dump = x; 
+         x = y; 
+         y = dump; 
+         printf("\n교환한 두 수 \n x=%d \n y=%d\n", x, y); 
+         break; 
+      } 
+      case 2: 
+      { 
+         x = x + y; 
+         y = x - y; 
+         x = x - y; 
+         printf("\n교환한 두 수 \n x=%d \n y=%d", x, y); 
+         break; 
+      } 
+      case 3: 
+      { 
+         x = x*y; 
+         y = x / y; 
+         x = x / y; 
+         printf("\n교환한 두 수 \n x=%d \n y=%d", x, y); 
+         break; 
+      } 
+      case 4: 
+      { 
+         x = x^y; 
+         y = x^y; 
+         x = x^y; 
+         printf("\n교환한 두 수 \n x=%d \n y=%d\n", x, y); 
+         break; 
+      } 
+   } 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. 2부터 n까지의 소수를 첫 행에는 하나, 두 번째 행에는 두 개 등 계속해서 피라미드 모양으로 10행 출력
+
+ 
+
+#include <stdio.h> 
+int main() 
+{ 
+   int i, j, k; 
+   int count, num = 2; 
+   for (i = 0; i<10; i++) 
+   { 
+      for (j = i; j<9; j++) 
+      printf("%c ", ' '); 
+      for (count = 0; count <= i; num++) 
+      { 
+         // 소수 판별 
+         for (j = 2; j<num; j++) 
+         { 
+            if (num % j == 0) 
+            break; 
+         } 
+         if (j == num) 
+         { 
+            printf("%3d ", num); 
+            count++; 
+         } 
+      } 
+      printf("\n"); 
+   } 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. 배열과 함수를 사용하지 않고, 정수를 이진수, 팔진수, 십육진수로 출력
+
+ 
+
+#include<stdio.h> 
+int main() 
+{ 
+   int jeo = 0, n = 0; 
+   int pal = 0; 
+   int yuk = 0, yumok = 0; 
+   do 
+   { 
+      printf("\n\n정수를 입력하시죠 : "); 
+      scanf("%d", &jeo); 
+      printf("\n\n이진수: "); 
+      for (n = 31; n >= 0; n--) 
+      { 
+         printf("%1d", (jeo & 1 << n) ? 1 : 0); 
+      } 
+      puts(" "); 
+      printf("\n\n팔진수: "); 
+      printf("%8o", jeo); 
+      //팔진수 넣어 
+      puts(" "); 
+      printf("\n\n십육진수: "); 
+      printf("%8x", jeo); 
+      //십육진수 넣어 
+   } while (yuk >= 0); 
+} 
