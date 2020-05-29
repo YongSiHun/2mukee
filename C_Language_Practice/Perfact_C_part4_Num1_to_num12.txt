@@ -1,0 +1,390 @@
+1.  표준입력으로 4자리 정수를 입력받아 여러 형식으로 출력하기
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int yong; 
+   printf("4자리 정수 입력 : "); 
+   scanf("%d", &yong); 
+   printf("%10d\n", yong); 
+   printf("%010d\n", yong); 
+   printf("%+010d\n", yong); 
+   printf("%d\n", yong); 
+   printf("%10o\n", yong); 
+   printf("%010o\n", yong); 
+   printf("%10x\n", yong); 
+   printf("%0#10x\n", yong); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. 함수 Getchar 입력받고 putchar과 printf로 문자그대로 출력, 문자의 코드값을 십진수, 팔진수, 십육진수로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   char a; 
+   puts("문자하나 입력 : "); 
+   a = getchar(); 
+   putchar("%c\n", a); 
+   printf("%c\n", a); 
+   printf("%u\n%o\n%x\n", a, a, a); 
+   getch(); 
+} 
+
+
+
+
+
+
+3. 매크로 상수로 원주율 3.141592정의, 원 반지름, 면적, 둘레 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+#define PI 3.141592 
+int main() 
+{ 
+   float ban; 
+   printf("반지름을 입력하세요 : "); 
+   scanf("%f", &ban); 
+   printf("원의 반지름 = %f\n", ban); 
+   printf("원의 면적 = %lf\n", ban*ban*PI); 
+   printf("원의 둘레 = %lf", ban * 2 * PI); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+4. 화씨온도를 소수로 입력받아 섭씨온도를 출력하는 프로그램을 작성
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float hwa; 
+   printf("화씨온도 소수로 입력 : "); 
+   scanf("%f", &hwa); 
+   printf("섭씨 %.4f도", 5.0/9.0*(hwa-32.0)); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. 섭씨온도를 소수로 3개입력받고 각각 화씨온도로 소수 4째자리까지 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float a, b, c,sup; 
+   printf("첫번째 섭씨온도 소수로 입력 : "); 
+   scanf("%f", &a); 
+   printf("\n두번째 섭씨온도 소수로 입력 : "); 
+   scanf("%f", &b); 
+   printf("\n세번째 섭씨온도 소수로 입력 : "); 
+   scanf("%f", &c); 
+   sup = (9.0 / 5.0); 
+   printf("\n첫번째 화씨온도 = %.4f\n두번째 화씨온도 = %.4f\n세번째 화씨온도 = %.4f", sup*(a + 32.0), sup*(b + 32.0), sup*(c + 32.0)); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. 아파트 면적의 평을 표준입력으로 입력받아 제곱미터로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int png; 
+   printf("몇평인지 입력하시오 : "); 
+   scanf("%d", &png); 
+   printf("%d평은 %f㎡ 입니다.", png, png*3.305785); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. 길이 km을 입력받아 마일로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int km; 
+   printf("몇 Km 입력 : "); 
+   scanf("%d", &km); 
+   printf("%dkm은 %f마일", km, km*0.621371); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. 문자입력받아서 8,10,16진수로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   char mun; 
+   printf("문자 하나를 입력하세요 : "); 
+   scanf("%c", &mun); 
+   printf("문자 : %c\n8진수 코드값 : %o\n10진수 코드값 : %u\n16진수 코드값 : %x",mun,mun,mun,mun); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. 두 실수를 입력받아 사각형의 면적을 각각 우측,좌측으로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float a, b; 
+   printf("가로길이 입력후 세로길이 입력 : "); 
+   scanf("%f %f", &a, &b); 
+   printf("첫번째 사각형 면적 = %12.3f\n두번째 사각형 면적 = %-12.3f", a*b,a*b); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. 두 정수를 입력받아 합은 정수로, 평균은 실수로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   int one, two; 
+   float pyp; 
+   printf("두 정수를 입력 : "); 
+   scanf("%d %d", &one, &two); 
+   pyp = (one + two) / 2; 
+   printf("합 = %d\n평균 = %f", one + two,pyp); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. 두 실수를 입력받아 합과 평균을 모두 실수로 출력하는 프로그램
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float one, two, pyp; 
+   printf("두 실수를 입력 : "); 
+   scanf("%f %f", &one, &two); 
+   pyp = one + two; 
+   printf("합 = %f\n평균 = %f",pyp,pyp/2); 
+   getch(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. 두 실수를 입력받아 모두 정수로 변환하여 합과 평균 모두 실수로 출력
+
+
+#include<stdio.h> 
+#include<conio.h> 
+int main() 
+{ 
+   float one, two; 
+   printf("두 실수를 입력 : "); 
+   scanf("%f %f", &one, &two); 
+   printf("합 = %f\n평균 = %f", (int)one+two,(int)(one+two)/2); 
+   getch(); 
+} 
