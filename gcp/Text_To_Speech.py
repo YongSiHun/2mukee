@@ -47,7 +47,7 @@ voice = gender_select()
 
 
 while(True):
-    tts = str(input("할말을 입력하세요 : "))
+    tts = str(input("할말을 입력하세요 (! : exit) : "))
 
     if (tts == "!"):
         pygame.quit()
