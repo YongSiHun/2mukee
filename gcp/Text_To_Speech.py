@@ -35,8 +35,8 @@ def play_Speech(filename):
 def naming():
     chk = 0
     filename = "output" + str(chk) + ".mp3"
-    write_mp3_file(filename)
-    if write_mp3_file(filename) == 0:
+    write_mp3_file(filename) // 1번 호출
+    if write_mp3_file(filename) == 0: // 2번호출
         chk += 1
         filename = "output" + str(chk) + ".mp3"
         write_mp3_file(filename)
